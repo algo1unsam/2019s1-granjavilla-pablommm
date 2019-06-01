@@ -25,8 +25,11 @@ program farmvillegame {
 	keyboard.t().onPressDo { hector.siembra(new Trigo()) }
 	keyboard.o().onPressDo { hector.siembra(new Tomaco()) }
 	
-	keyboard.r().onPressDo { hector.regar() }
+	//regar
+	keyboard.r().onPressDo { hector.regar(game.colliders(hector)) }
+	keyboard.c().onPressDo { hector.cosechar(game.colliders(hector)) }
 	
 //	START
+
 	game.start()
 }
